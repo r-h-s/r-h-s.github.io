@@ -1,0 +1,14 @@
+{% include header.html %}
+
+<div class="masthead">
+  <h1>Rasmus Hvid</h1>
+  <p class="lead">Et lille portfolio, hvor jeg kan fremvise nogle af mine ideer og projekter</p>
+</div>
+
+<div class="listing">
+  {% for post in site.posts %}
+    <a href="{{ post.url }}"><div class="entry" style="background-color: #{{ post.background}}"><h1>{{ post.title }}</h1><p class="lead">{{ post.lead }}</p></div></a>
+  {% endfor %}
+</div>
+
+{% include footer.html %}
